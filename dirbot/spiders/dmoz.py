@@ -6,10 +6,10 @@ from dirbot.items import Website
 
 class DmozSpider(Spider):
     name = "dmoz"
-    allowed_domains = ["dmoz.org"]
+    allowed_domains = ["resource-zone"]
     start_urls = [
-        "http://www.dmoz.org/Computers/Programming/Languages/Python/Books/",
-        "http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/",
+        "https://www.resource-zone.com/",
+        "https://www.resource-zone.com/",
     ]
 
     def parse(self, response):
