@@ -6,10 +6,10 @@ from dirbot.items import Website
 
 class DmozSpider(Spider):
     name = "dmoz"
-    allowed_domains = ["resource-zone"]
+    allowed_domains = ["dmoztools.net"]
     start_urls = [
-        "https://www.resource-zone.com/",
-        "https://www.resource-zone.com/",
+        "http://dmoztools.net/Computers/Programming/Languages/Python/Books/",
+        "http://dmoztools.net/Computers/Programming/Languages/Python/Resources/",
     ]
 
     def parse(self, response):
@@ -17,7 +17,7 @@ class DmozSpider(Spider):
         The lines below is a spider contract. For more info see:
         http://doc.scrapy.org/en/latest/topics/contracts.html
 
-        @url http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/
+        @url http://dmoztools.net/Computers/Programming/Languages/Python/Resources/
         @scrapes name
         """
         sites = response.css('#site-list-content > div.site-item > div.title-and-desc')
